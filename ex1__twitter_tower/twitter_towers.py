@@ -17,12 +17,12 @@ def main():
             if height == width or abs(height-width) > 5:
                 print(f'The area of the rectangle: {height*width} \n') # Rectangle area
             else:
-                print('The perimeter of the rectangle: %d \n' %(2*height + 2*width)) # rectangle perimeter
+                print(f'The perimeter of the rectangle: {2*height + 2*width} \n') # Rectangle perimeter
         elif opt == '2': # Triangle tower
             sub_opt = input('Select one of the options:\n1) The triangle perimeter\n2) The triangle print\n')
-            if sub_opt == '1': # triangle perimeter
-                print('The triangle of perimeter: %f \n' %triangle_perimeter(height, width))
-            elif sub_opt == '2': # triangle print
+            if sub_opt == '1': # Triangle perimeter
+                print(f'The triangle of perimeter: {triangle_perimeter(height, width)} \n')
+            elif sub_opt == '2': # Triangle print
                 triangle_print(height, width)
        
 def triangle_perimeter(height, width): 
@@ -40,7 +40,7 @@ def triangle_print(height, width):
         row_amount = math.floor((height-2)/jump_amount)
         mod = (height-2)%jump_amount
 
-        print_row(1, width) #
+        print_row(1, width) 
 
         for i in range(3, width, 2):
             current_row_amount = row_amount if i > 3 else (row_amount + mod)
@@ -57,7 +57,7 @@ def print_row(num, width):
     for i in range(spaces_amoumt, spaces_amoumt + num):
         print(end="*")
 
-    print("\r")
+    print('\r')
 
 main()
 

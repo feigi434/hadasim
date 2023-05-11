@@ -30,6 +30,6 @@ app.use((req, res, next) => {
 app.use('/api', apiRoutes);
 
 app.listen(process.env.PORT, () => {
-    console.log(`App listening at http://localhost:${process.env.PORT}/main`)
+    console.log(`App listening at http://localhost:${process.env.PORT|| 3001}/main`)
 });
 
